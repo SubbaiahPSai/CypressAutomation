@@ -12,7 +12,7 @@ describe("xyz bank login", function () {
 
         })
     })
-    it.only("click on login button", function () {
+    it("click on login button", function () {
         cy.click_on_login_page()
         // click on customer button
         cy.click_customer_button()
