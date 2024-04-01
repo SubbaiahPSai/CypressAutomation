@@ -12,7 +12,7 @@ describe("xyz bank login", function () {
 
         })
     })
-    it("click on login button", function () {
+    it.only("click on login button", function () {
         cy.click_on_login_page()
         // click on customer button
         cy.click_customer_button()
@@ -26,6 +26,10 @@ describe("xyz bank login", function () {
         cy.open_accoount()
         // click on customer button
         cy.click_costmer()
+        // click on customer login button
+        cy.click_on_login_button()
+        // verify on customer name
+        cy.welcome_customer()
 
     })
     it("click on add customer button", function () {
@@ -42,16 +46,22 @@ describe("xyz bank login", function () {
     })
     it("click open account", function () {
 
-        cy.visit(this.data.url1)
 
         // click on open account button
         cy.open_accoount()
     })
     it("click_on_customer_button", function () {
-        cy.visit(this.data.url1)
 
         // click on customer button
         cy.click_costmer()
 
+    })
+    it("click on customer log in button", function () {
+        // click customer login button
+        cy.click_on_login_button()
+    })
+    it("welcome customer name", function () {
+        // verify on customer name
+        cy.welcome_customer()
     })
 })

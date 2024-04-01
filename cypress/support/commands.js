@@ -37,6 +37,8 @@ import managerobjects from "../support/pageobjectmodel/Bankmanagepageobject.cy"
 import addcustomer from "../support/pageobjectmodel/addcustomerpageobjects.cy"
 import openaccount from "../support/pageobjectmodel/openaccountpageobjects.cy"
 import customer from "../support/pageobjectmodel/customerpageobjects.cy"
+import customer_login from "../support/pageobjectmodel/customerloginpageobjects.cy"
+import welcome_name from "../support/pageobjectmodel/welcomecustomernamepageobjects.cy"
 import krishna from "../fixtures/xyzbank.json"
 Cypress.Commands.add("CardDetails", function () {
   cy.get('[data-qa="name-on-card"]').type(chandu.CardName, { log: false })

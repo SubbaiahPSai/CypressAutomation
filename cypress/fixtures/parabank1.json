@@ -1,0 +1,15 @@
+{
+    "url": "https://parabank.parasoft.com/parabank/register.htm;jsessionid=C0AC7FA5FF800F9797C44F48AFE7307B",
+    "first_name" : "sai",
+    "last_name" : "krishna",
+    "address" : "hydreabad",
+    "city" : "SR Nagar",
+    "state" : "Telengana",
+    "Zip_code" : "500038",
+     "phone" : "8501055437",
+     "SSN" : "8675409",
+     "user_name" : "krishna1",
+     "password" : "Test@123",
+     "confirm_password" : "Test@123"
+
+}
