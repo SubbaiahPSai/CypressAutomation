@@ -12,7 +12,7 @@ class admin {
         return cy.xpath('(//input[@class="oxd-input oxd-input--active"])[2]')
     }
     select_userrole() {
-        return cy.xpath('(//div[@class="oxd-select-text-input"])[1]')
+        return cy.xpath('(//div[@class="oxd-select-text oxd-select-text--active"])[1]')
     }
 
 
@@ -30,8 +30,8 @@ Cypress.Commands.add("click_admin_page", () => {
     // Enter user name
     adminname.click_on_username().type("admin")
     // click user role
-   //adminname.select_userrole().select(1)
+   adminname.select_userrole().click()
+   adminname.select_userrole().select('Admin')
 })
-
 
 export default admin

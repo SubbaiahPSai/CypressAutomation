@@ -41,6 +41,7 @@ import customer_login from "../support/pageobjectmodel/customerloginpageobjects.
 import welcome_name from "../support/pageobjectmodel/welcomecustomernamepageobjects.cy"
 import OrangeHRM from "../support/OrngeHrm/OrangeHRMpagrobjects.cy"
 import admin from "../support/OrngeHrm/adminpageobjects.cy"
+import LogInPageObjects from "../support/nopecommerece/registerpageobjects.cy"
 import krishna from "../fixtures/xyzbank.json"
 Cypress.Commands.add("CardDetails", function () {
   cy.get('[data-qa="name-on-card"]').type(chandu.CardName, { log: false })
