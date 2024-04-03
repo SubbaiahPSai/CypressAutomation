@@ -1,16 +1,20 @@
-describe("Nop Commers Projects",()=>{
-    beforeEach(function(){
+
+describe("Nop Commers Projects", () => {
+    beforeEach(function () {
         //get the fixture from the log in the website
-        cy.fixture("nope").then((data)=>{
+        cy.fixture("nope").then((data) => {
             this.data = data
-            cy.viewport(1920,1080)
+            cy.viewport(1920, 1080)
             cy.visit(this.data.URL)
         })
     })
-    it("NopCommersExcerciseProject",function(){
+    it("NopCommersExcerciseProject", function () {
         //click on the log in botton in nopcommers
-        cy.LogInNopCommers()
+        //cy.LogInNopCommers()
         //Fill the customer details
-        cy.FillDetailsOnUser(this.data.Fname,this.data.Lname,this.data.Day,this.data.Month,this.data.Year,this.data.Email,this.data.Cname,this.data.Password,this.data.Repassword)
-    })
+        //cy.FillDetailsOnUser(this.data.Fname, this.data.Lname, this.data.Day, this.data.Month, this.data.Year, this.data.Email, this.data.Cname, this.data.Password, this.data.Repassword)
+        // click PlaceOrder
+        cy.PlaceOrderNOPcmrs()
+
+    })
 })

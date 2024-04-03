@@ -1,58 +1,65 @@
-class LogInPage{
-    LogInButton(){
+class LogInPage {
+    LogInButton() {
         return cy.xpath('//a[@class="ico-login"]')
     }
-    LogInPage(){
+    LogInPage() {
         return cy.contains("Welcome, Please Sign In!")
     }
-    NewCustomer(){
+    NewCustomer() {
         return cy.contains("New Customer")
     }
-    RegisterButton(){
+    RegisterButton() {
         return cy.xpath('(//button[@type="button"])[1]')
     }
-    REgisterPage(){
+    REgisterPage() {
         return cy.contains("Register")
     }
-    RadioButton(){
+    RadioButton() {
         return cy.get("#gender-male")
     }
-    FirstName(){
+    FirstName() {
         return cy.xpath('(//input[@data-val="true"])[1]')
     }
-    LastName(){
+    LastName() {
         return cy.xpath('(//input[@data-val="true"])[2]')
     }
-    Enterday(){
+    Enterday() {
         return cy.xpath('//select[@name="DateOfBirthDay"]')
     }
-    EnterMonth(){
+    EnterMonth() {
         return cy.xpath('//select[@name="DateOfBirthMonth"]')
     }
-    EnterYear(){
+    EnterYear() {
         return cy.xpath('//select[@name="DateOfBirthYear"]')
     }
-    EnterEmail(){
+    EnterEmail() {
         return cy.xpath('//input[@data-val-email="Wrong email"]')
     }
-    EnterCompanyName(){
+    EnterCompanyName() {
         return cy.get("#Company")
     }
-    NewsLetter(){
+    NewsLetter() {
         return cy.xpath('//input[@type="checkbox"]')
     }
-    password(){
+    password() {
         return cy.get("#Password")
     }
-    RePassword(){
+    RePassword() {
         return cy.get("#ConfirmPassword")
     }
-    ClickRegistration(){
+    ClickRegistration() {
         return cy.get('#register-button')
+    }
+    Your_registration_completed() {
+        return cy.contains("Your registration completed")
+
+    }
+    click_continue() {
+        return cy.xpath('//a[contains(text(),"Continue")]')
     }
 }
 const LogInPageObjects = new LogInPage
-Cypress.Commands.add("LogInNopCommers",()=>{
+Cypress.Commands.add("LogInNopCommers", () => {
     //click on the log in button
     LogInPageObjects.LogInButton().click()
     //LogIn Page Visibulation
@@ -64,7 +71,7 @@ Cypress.Commands.add("LogInNopCommers",()=>{
     //register page checking
     LogInPageObjects.REgisterPage().should("be.visible")
 })
-Cypress.Commands.add("FillDetailsOnUser",(Fname,Lname,Day,Month,Year,Email,Cname,Password,RePassword)=>{
+Cypress.Commands.add("FillDetailsOnUser", (Fname, Lname, Day, Month, Year, Email, Cname, Password, RePassword) => {
     //check the mail OR female button
     LogInPageObjects.RadioButton().check()
     //Enter first name on the customer
@@ -89,6 +96,10 @@ Cypress.Commands.add("FillDetailsOnUser",(Fname,Lname,Day,Month,Year,Email,Cname
     LogInPageObjects.RePassword().type(RePassword)
     //click on the register button
     LogInPageObjects.ClickRegistration().click()
+    //Your registration completed
+    LogInPageObjects.Your_registration_completed().should("be.visible")
+    // click on continue button
+    LogInPageObjects.click_continue().click()
 })
 
 export default LogInPage
