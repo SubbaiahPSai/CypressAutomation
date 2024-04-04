@@ -15,6 +15,9 @@ describe("Nop Commers Projects", () => {
         //cy.FillDetailsOnUser(this.data.Fname, this.data.Lname, this.data.Day, this.data.Month, this.data.Year, this.data.Email, this.data.Cname, this.data.Password, this.data.Repassword)
         // click PlaceOrder
         cy.PlaceOrderNOPcmrs()
+        // click check out page
+        cy.check_out_page(this.data.Fname, this.data.Lname, this.data.Email, this.data.Cname, this.data.city, this.data.address1, this.data.address2, this.data.zipcod, this.data.phnumber, this.data.faxnumber)
+
 
     })
 })

@@ -6,7 +6,13 @@
     "Month":"April",
     "Year":"1998",
     "Cname":"TCS",
-    "Email":"psaichandu125@gamil.com",
+    "Email":"psaichandu12514@gamil.com",
     "Password":"Test@123",
-    "Repassword":"Test@123"
+    "Repassword":"Test@123",
+    "city":"Hyderabad",
+    "address1":"sr.nagar",
+    "address2":"Hyderaba",
+    "zipcod":"500038",
+    "phnumber":"8601077345",
+    "faxnumber":"37873698"
 }

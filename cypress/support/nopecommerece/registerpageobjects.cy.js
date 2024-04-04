@@ -73,7 +73,7 @@ Cypress.Commands.add("LogInNopCommers", () => {
 })
 Cypress.Commands.add("FillDetailsOnUser", (Fname, Lname, Day, Month, Year, Email, Cname, Password, RePassword) => {
     //check the mail OR female button
-    LogInPageObjects.RadioButton().check()
+    LogInPageObjects.RadioButton().click()
     //Enter first name on the customer
     LogInPageObjects.FirstName().type(Fname)
     //Enter Second Name on the customer
