@@ -16,7 +16,7 @@ describe("Nop Commers Projects", () => {
         // click PlaceOrder
         cy.PlaceOrderNOPcmrs()
         // click check out page
-        cy.check_out_page(this.data.Fname, this.data.Lname, this.data.Email, this.data.Cname, this.data.city, this.data.address1, this.data.address2, this.data.zipcod, this.data.phnumber, this.data.faxnumber)
+        cy.check_out_page(this.data.Fname, this.data.Lname, this.data.Email, this.data.Cname,this.data.country,this.data.city, this.data.address1, this.data.address2, this.data.zipcod, this.data.phnumber, this.data.faxnumber)
 
 
     })

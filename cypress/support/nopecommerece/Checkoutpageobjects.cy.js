@@ -1,6 +1,6 @@
 class Checkout{
     Checkout_page(){
-        return cy.get('[data-val-required="First name is required."]')
+        return cy.get('#BillingNewAddress_FirstName')
     }
     last_name(){
         return cy.get('[id="BillingNewAddress_LastName"]')
@@ -12,7 +12,7 @@ class Checkout{
         return cy.xpath('//input[@id="BillingNewAddress_Company"]')
     }
     select_country(){
-        return cy.xpath('data-trigger="country-select"')
+        return cy.get("#BillingNewAddress_CountryId")
     }
     select_state(){
         return cy.xpath('//select[@data-trigger="state-select"]')
@@ -41,7 +41,7 @@ class Checkout{
 }
 const Checkoutpage = new Checkout
 // create custom command
-Cypress.Commands.add("check_out_page",(Fname,Lname,Email,Cname,city,address1,address2,zipcod,phnumber,faxnumber)=>{
+Cypress.Commands.add("check_out_page",(Fname,Lname,Email,Cname,country,city,address1,address2,zipcod,phnumber,faxnumber)=>{
     // Enter first name
     Checkoutpage.Checkout_page().type(Fname)
     // Enter last name
@@ -51,11 +51,11 @@ Cypress.Commands.add("check_out_page",(Fname,Lname,Email,Cname,city,address1,add
     // Enter the comapaney name
     Checkoutpage.companey_name(Cname)
     // select country
-    Checkoutpage.select_country.select('India')
+    Checkoutpage.select_country().select(country)
     // selecyt state
-    Checkoutpage.select_state(1)
+    Checkoutpage.select_state().select(0)
     // Enter the city
-    Checkoutpage.city.type(city)
+    Checkoutpage.city().type(city)
     // Enter address1
     Checkoutpage.address1().type(address1)
     // Enter address2
