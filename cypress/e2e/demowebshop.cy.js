@@ -19,5 +19,7 @@ describe("Register on Demowebshop", function () {
         cy.product_add_tocart()
         // click on shoping cart
         cy.click_shoping_cart()
+        // click on billing adress
+        cy.billing_address(this.data.company, this.data.city, this.data.Address1, this.data.address2, this.data.zip, this.data.phone, this.data.fax)
     })
 })

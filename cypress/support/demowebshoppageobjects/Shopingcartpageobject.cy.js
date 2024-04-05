@@ -3,6 +3,7 @@ class shoping_cart {
         return cy.xpath("//span[contains(text(),'Shopping cart')]")
     }
     click_checkbox() {
+        
         return cy.get('#termsofservice')
     }
     checkout_button() {

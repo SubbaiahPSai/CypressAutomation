@@ -48,6 +48,7 @@ import Register from "../support/demowebshoppageobjects/Registerpageobject.cy"
 import loginpage from "../support/demowebshoppageobjects/Loginpageobjects.cy"
 import addcart from "../support/demowebshoppageobjects/addcartpageobject.cy"
 import shoping_cart from "../support/demowebshoppageobjects/Shopingcartpageobject.cy"
+import Billingaddress from "../support/demowebshoppageobjects/billingaddressobjects.cy"
 import krishna from "../fixtures/xyzbank.json"
 Cypress.Commands.add("CardDetails", function () {
   cy.get('[data-qa="name-on-card"]').type(chandu.CardName, { log: false })

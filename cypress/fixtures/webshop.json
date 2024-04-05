@@ -2,7 +2,14 @@
     "URL": "https://demowebshop.tricentis.com/",
     "Fname": "sai",
     "Lname": "chandu",
-    "Email": "saichandu42@gmail.com",
+    "Email": "saichandu4610001@gmail.com",
     "password": "Test@123",
-    "Cpassword": "Test@123"
+    "Cpassword": "Test@123",
+    "city":"Hyderabad",
+    "Address1":"Sr.Nagar",
+    "address2":"Hyderabad",
+    "zip":"500038",
+    "phone":"8901033424",
+    "fax":"678999",
+    "companey":"wipro"
 }
