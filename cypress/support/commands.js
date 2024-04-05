@@ -43,7 +43,11 @@ import OrangeHRM from "../support/OrngeHrm/OrangeHRMpagrobjects.cy"
 import admin from "../support/OrngeHrm/adminpageobjects.cy"
 import LogInPageObjects from "../support/nopecommerece/registerpageobjects.cy"
 import GuestUser from "../support/nopecommerece/placeorder.cy"
-import Checkout from"../support/nopecommerece/Checkoutpageobjects.cy"
+import Checkout from "../support/nopecommerece/Checkoutpageobjects.cy"
+import Register from "../support/demowebshoppageobjects/Registerpageobject.cy"
+import loginpage from "../support/demowebshoppageobjects/Loginpageobjects.cy"
+import addcart from "../support/demowebshoppageobjects/addcartpageobject.cy"
+import shoping_cart from "../support/demowebshoppageobjects/Shopingcartpageobject.cy"
 import krishna from "../fixtures/xyzbank.json"
 Cypress.Commands.add("CardDetails", function () {
   cy.get('[data-qa="name-on-card"]').type(chandu.CardName, { log: false })
