@@ -47,5 +47,5 @@ Cypress.Commands.add("billing_address", (cname1, city, Address1, address2, zip, 
     // Enter the faxnumber
     billing.fax_number().type(fax)
     // click on cintinue button
-   //  billing.click().click()
+     billing.click().click()
 })
