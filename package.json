@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "cyoress:open": "cypress opn"
+    "cyoress:open": "cypress opn",
+    "Run_DashBoard":"npx cypress run --record --key 16ea3b3c-2480-41ce-ae60-c5c0665a1f33 --spec 'cypress/e2e/*.cy.js'"
   },
   "author": "",
   "license": "ISC",
